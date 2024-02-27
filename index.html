@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body >
+  
+</body>
+
+
+
+    
+ <script>
+
+
+
+
+let body = document.querySelector("body");
+
+document.onclick = (e) => {
+    
+    let currentTime = new Date();
+    
+    
+    let hours = currentTime.getHours();
+    let minutes = currentTime.getMinutes();
+    let seconds = currentTime.getSeconds();
+    
+    
+    
+    let timeString = `${hours}:${minutes}:${seconds}`;
+    
+    
+    let timeDisplay = document.createElement("p");
+    timeDisplay.textContent = `Current Time: ${timeString}`;
+    
+    
+    timeDisplay.style.position = "absolute";
+    timeDisplay.style.top = `${e.clientY}px`;
+    timeDisplay.style.left = `${e.clientX}px`;
+    
+    
+    body.appendChild(timeDisplay);
+};
+
+
+
+
+
+  
+</script>
+</html>
